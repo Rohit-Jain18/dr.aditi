@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Aditi Mahajan — Clinical &amp; Aesthetic Dermatologist | Book Online Consultation</title>
+<meta name="description" content="Dr. Aditi Mahajan (MBBS, MD DVL) offers personalised online &amp; in-person skin consultations from Dr. Rickson's Dermatherapie Clinic, Mumbai. Acne, scars, PCOS hair loss — real care, real results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Caveat:wght@500;600;700&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  --paper:         #F6F0E4;
+  --paper-mid:     #EEE3CD;
+  --paper-deep:    #E5D5B8;
+  --ink:           #29201A;
+  --ink-soft:      #5A4E44;
+  --ink-muted:     #8A7B70;
+  --terracotta:    #C0714E;
+  --terra-deep:    #A45639;
+  --terra-glow:    rgba(192,113,78,0.18);
+  --sage:          #7E9169;
+  --sage-light:    #B8C9A9;
+  --gold:          #C99A43;
+  --gold-soft:     #E8D4A0;
+  --gold-pale:     #F3ECD6;
+  --white:         #FEFCF8;
+  --shadow-soft:   0 6px 24px rgba(41,32,26,0.08);
+  --shadow-card:   0 16px 48px rgba(41,32,26,0.12);
+  --shadow-hero:   0 28px 64px rgba(41,32,26,0.16);
+  --radius-pill:   100px;
+  --radius-card:   20px;
+  --radius-lg:     28px;
+  --transition:    0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(ellipse 60% 40% at 10% 15%, rgba(126,145,105,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 90% 80%, rgba(192,113,78,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 50% 50%, rgba(201,154,67,0.04) 0%, transparent 70%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.55;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4 { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; }
+p { line-height: 1.7; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.wrap { max-width: 660px; margin: 0 auto; padding: 0 22px; position: relative; z-index: 2; }
+
+.eyebrow {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--terra-deep);
+  padding: 6px 14px;
+  border: 1px solid rgba(164,86,57,0.28);
+  border-radius: var(--radius-pill);
+  background: rgba(192,113,78,0.06);
+}
+
+.script { font-family: 'Caveat', cursive; }
+
+.body-text {
+  font-size: 16.5px;
+  color: var(--ink-soft);
+  line-height: 1.72;
+}
+.body-text + .body-text { margin-top: 18px; }
+
+/* DIVIDERS */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(41,32,26,0.12) 20%, rgba(41,32,26,0.12) 80%, transparent);
+  position: relative;
+  z-index: 2;
+}
+
+.section-divider--ornament {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+  padding: 0 22px;
+}
+.section-divider--ornament::before,
+.section-divider--ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(41,32,26,0.12));
+}
+.section-divider--ornament::after {
+  background: linear-gradient(270deg, transparent, rgba(41,32,26,0.12));
+}
+.ornament-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); opacity: 0.5; }
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal--left  { transform: translateX(-22px); }
+.reveal--right { transform: translateX(22px); }
+.reveal--left.in, .reveal--right.in { transform: translateX(0); opacity: 1; }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* TOP STRIP */
+.top-strip {
+  text-align: center;
+  padding: 14px 0 12px;
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  letter-spacing: 0.06em;
+  position: relative;
+  z-index: 10;
+  background: rgba(246,240,228,0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(41,32,26,0.07);
+}
+.top-strip a { color: var(--terra-deep); font-weight: 500; }
+.top-strip .dot { color: var(--gold); margin: 0 8px; }
+
+/* HERO */
+.hero { padding: 52px 0 60px; text-align: center; }
+
+.hero-greeting {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  color: var(--terra-deep);
+  display: inline-block;
+  transform: rotate(-2.5deg);
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.hero h1 { font-size: clamp(32px, 7.5vw, 48px); line-height: 1.14; margin-bottom: 18px; color: var(--ink); }
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--terracotta);
+  position: relative;
+}
+.hero h1 em::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--terracotta), var(--gold));
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+.hero-sub { font-size: 17px; color: var(--ink-soft); max-width: 430px; margin: 0 auto 38px; line-height: 1.65; }
+
+/* VIDEO CARD */
+.video-wrap { max-width: 340px; margin: 0 auto; position: relative; }
+.video-wrap::before, .video-wrap::after {
+  content: "";
+  position: absolute;
+  border-radius: 24px;
+  inset: 0;
+}
+.video-wrap::before {
+  transform: rotate(2.5deg) scale(1.03);
+  background: var(--paper-mid);
+  box-shadow: var(--shadow-soft);
+  z-index: 0;
+}
+.video-wrap::after {
+  transform: rotate(-1.5deg) scale(1.015);
+  background: var(--paper-deep);
+  z-index: 0;
+}
+
+.video-card {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 9 / 15;
+  background: linear-gradient(155deg, #3C332B 0%, #1E1812 100%);
+  border-radius: 22px;
+  overflow: hidden;
+  border: 5px solid var(--paper-deep);
+  box-shadow: var(--shadow-hero);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.video-card img.video-thumb {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; opacity: 0.5;
+  mix-blend-mode: luminosity;
+}
+.video-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(30,24,18,0.85) 0%, rgba(30,24,18,0.2) 60%, transparent 100%);
+}
+.video-badge {
+  position: absolute; top: 14px; left: 14px;
+  background: rgba(246,240,228,0.9);
+  backdrop-filter: blur(6px);
+  color: var(--ink);
+  font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;
+  font-family: 'Jost', sans-serif; font-weight: 600;
+  padding: 5px 12px; border-radius: var(--radius-pill);
+}
+.video-content {
+  position: relative; z-index: 2; text-align: center; padding: 0 28px;
+  display: flex; flex-direction: column; align-items: center;
+}
+.play-btn {
+  width: 66px; height: 66px; border-radius: 50%;
+  background: var(--terracotta);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 30px rgba(192,113,78,0.5);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.video-card:hover .play-btn { transform: scale(1.08); box-shadow: 0 14px 36px rgba(192,113,78,0.6); }
+.play-btn svg { width: 22px; height: 22px; fill: #fff; margin-left: 4px; }
+.video-caption { font-family: 'Caveat', cursive; font-size: 23px; color: var(--gold-soft); line-height: 1.3; text-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+.video-sub { font-size: 12px; color: rgba(232,212,160,0.65); margin-top: 8px; font-family: 'Jost', sans-serif; letter-spacing: 0.03em; }
+
+.hero-trust {
+  display: flex; justify-content: center; align-items: center;
+  gap: 6px; flex-wrap: wrap; margin-top: 28px;
+  font-size: 12.5px; color: var(--ink-muted);
+}
+.hero-trust .trust-dot { color: var(--gold); }
+
+/* SECTIONS */
+section { padding: 70px 0; }
+section.tight { padding: 50px 0; }
+
+/* STORY */
+.story-intro { display: grid; gap: 22px; margin-bottom: 36px; }
+
+.story-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
+
+.story-card {
+  background: var(--white); border-radius: var(--radius-card); padding: 22px 18px;
+  box-shadow: var(--shadow-soft); position: relative; overflow: hidden;
+}
+.story-card.then { transform: rotate(-1.8deg); border: 1px solid var(--paper-deep); }
+.story-card.now { transform: rotate(1.4deg); border: 2px solid var(--gold); background: var(--gold-pale); }
+.story-card-tag { font-family: 'Caveat', cursive; font-size: 20px; color: var(--ink-soft); display: block; margin-bottom: 10px; }
+.story-card.now .story-card-tag { color: var(--terra-deep); }
+.story-card p { font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
+.story-card .card-icon { position: absolute; bottom: 14px; right: 14px; font-size: 22px; opacity: 0.3; }
+
+.big-quote {
+  position: relative; padding: 38px 32px 32px;
+  background: linear-gradient(135deg, var(--paper-deep), var(--paper-mid));
+  border-radius: var(--radius-lg); text-align: center;
+  border: 1px solid rgba(201,154,67,0.2); margin: 36px 0;
+}
+.big-quote::before {
+  content: '\201C'; font-family: 'Fraunces', serif; font-size: 100px;
+  color: var(--gold-soft); position: absolute; top: -18px; left: 18px; line-height: 1; opacity: 0.7;
+}
+.big-quote p {
+  font-family: 'Fraunces', serif; font-style: italic;
+  font-size: clamp(20px, 4vw, 24px); line-height: 1.45; color: var(--ink); position: relative; z-index: 1;
+}
+.big-quote .quote-attr {
+  font-family: 'Jost', sans-serif; font-style: normal;
+  font-size: 13px; color: var(--ink-muted); margin-top: 14px; letter-spacing: 0.04em;
+}
+
+/* WHAT'S INCLUDED */
+.section-label-row { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+.section-label-line { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(41,32,26,0.12), transparent); }
+
+.includes-list { display: grid; gap: 0; }
+.includes-item {
+  display: flex; gap: 18px; align-items: flex-start; padding: 24px 0;
+  border-bottom: 1px solid rgba(41,32,26,0.08);
+}
+.includes-item:first-child { padding-top: 8px; }
+.includes-item:last-child { border-bottom: none; padding-bottom: 8px; }
+.includes-icon-wrap {
+  flex-shrink: 0; width: 42px; height: 42px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; font-size: 20px;
+  background: var(--paper-mid); border: 1px solid rgba(41,32,26,0.08);
+}
+.includes-item:nth-child(1) .includes-icon-wrap { background: rgba(126,145,105,0.12); }
+.includes-item:nth-child(2) .includes-icon-wrap { background: rgba(192,113,78,0.1); }
+.includes-item:nth-child(3) .includes-icon-wrap { background: rgba(201,154,67,0.12); }
+.includes-item:nth-child(4) .includes-icon-wrap { background: rgba(126,145,105,0.12); }
+.includes-item:nth-child(5) .includes-icon-wrap { background: rgba(192,113,78,0.1); }
+.includes-body h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 15.5px; margin-bottom: 4px; color: var(--ink); }
+.includes-body p { font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
+
+/* DOCTOR SECTION */
+.doc-section-bg {
+  background: linear-gradient(135deg, var(--paper-mid) 0%, var(--white) 100%);
+  border-top: 1px solid rgba(41,32,26,0.07);
+  border-bottom: 1px solid rgba(41,32,26,0.07);
+}
+.doc-layout { display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: start; }
+.doc-photo-wrap { position: relative; flex-shrink: 0; }
+.doc-photo {
+  width: 138px; height: 172px; border-radius: 18px; overflow: hidden;
+  box-shadow: var(--shadow-card); border: 4px solid var(--white);
+  transform: rotate(-2deg); position: relative; z-index: 1;
+}
+.doc-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.doc-photo-bg {
+  position: absolute; inset: -6px; border-radius: 22px;
+  background: linear-gradient(135deg, var(--gold-soft), var(--paper-deep));
+  z-index: 0; transform: rotate(1.5deg); opacity: 0.6;
+}
+.doc-name { font-size: clamp(22px, 4vw, 28px); color: var(--ink); margin-bottom: 4px; }
+.doc-title { font-family: 'Fraunces', serif; font-style: italic; font-size: 14.5px; color: var(--terracotta); margin-bottom: 14px; line-height: 1.4; }
+
+.cred-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+.cred-chip {
+  background: var(--white); border: 1px solid rgba(41,32,26,0.12); border-radius: var(--radius-pill);
+  padding: 7px 15px; font-size: 13px; color: var(--ink-soft); font-weight: 400; letter-spacing: 0.01em;
+  box-shadow: var(--shadow-soft);
+}
+.cred-chip.highlight { background: var(--paper-deep); border-color: var(--gold); color: var(--ink); font-weight: 500; }
+
+.specialty-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+.specialty-tag {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--white); border: 1px solid var(--paper-deep);
+  border-radius: var(--radius-card); padding: 14px 18px;
+  font-size: 14px; color: var(--ink-soft);
+  flex: 1; min-width: 180px; box-shadow: var(--shadow-soft);
+}
+.specialty-tag .tag-icon { font-size: 20px; flex-shrink: 0; }
+.specialty-tag strong { display: block; color: var(--ink); font-size: 13.5px; font-weight: 600; }
+.specialty-tag span { font-size: 12.5px; }
+
+/* HOW IT WORKS */
+.steps-list { counter-reset: steps; display: grid; gap: 0; margin-top: 28px; }
+.step-item {
+  display: flex; gap: 22px; align-items: flex-start; padding: 26px 0;
+  border-bottom: 1px solid rgba(41,32,26,0.07); position: relative;
+}
+.step-item:last-child { border-bottom: none; }
+.step-num {
+  flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--paper-mid); border: 2px solid var(--paper-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', serif; font-size: 18px; color: var(--terracotta); font-weight: 500;
+  position: relative; z-index: 1;
+}
+.step-item:not(:last-child) .step-num::after {
+  content: ""; position: absolute; top: 44px; left: 50%; transform: translateX(-50%);
+  width: 2px; height: calc(100% + 26px);
+  background: linear-gradient(to bottom, var(--paper-deep), transparent);
+}
+.step-body h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 16px; color: var(--ink); margin-bottom: 5px; margin-top: 10px; }
+.step-body p { font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+
+/* TESTIMONIALS */
+.testimonials-track { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; }
+.testimonial-card {
+  background: var(--white); border-radius: var(--radius-card); padding: 22px 18px;
+  box-shadow: var(--shadow-soft); border: 1px solid rgba(41,32,26,0.07);
+  position: relative; overflow: hidden;
+}
+.testimonial-card::before {
+  content: '\201C'; font-family: 'Fraunces', serif; font-size: 64px;
+  color: var(--gold-soft); position: absolute; top: -4px; left: 10px; line-height: 1; opacity: 0.6;
+}
+.testimonial-stars { font-size: 13px; color: var(--gold); margin-bottom: 10px; position: relative; z-index: 1; }
+.testimonial-text { font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 14px; position: relative; z-index: 1; font-style: italic; }
+.testimonial-author { display: flex; align-items: center; gap: 10px; }
+.author-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 600; font-family: 'Fraunces', serif; flex-shrink: 0;
+}
+.testimonial-card:nth-child(1) .author-avatar { background: rgba(192,113,78,0.15); color: var(--terracotta); }
+.testimonial-card:nth-child(2) .author-avatar { background: rgba(126,145,105,0.15); color: var(--sage); }
+.testimonial-card:nth-child(3) .author-avatar { background: rgba(201,154,67,0.15); color: var(--gold); }
+.testimonial-card:nth-child(4) .author-avatar { background: rgba(192,113,78,0.15); color: var(--terracotta); }
+.author-info strong { display: block; font-size: 13.5px; font-weight: 600; color: var(--ink); font-family: 'Jost', sans-serif; }
+.author-info span { font-size: 12px; color: var(--ink-muted); }
+
+/* VALUE CARD */
+.value-card {
+  background: var(--white); border-radius: var(--radius-lg); padding: 36px 28px;
+  box-shadow: var(--shadow-card); border: 1px solid rgba(201,154,67,0.2);
+  margin-top: 28px; position: relative; overflow: hidden;
+}
+.value-card::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--terracotta), var(--gold));
+}
+.value-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--terracotta), var(--terra-deep));
+  color: #fff; font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; padding: 6px 16px; border-radius: var(--radius-pill); margin-bottom: 18px;
+}
+.value-list { list-style: none; display: grid; gap: 14px; margin: 22px 0; }
+.value-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--ink-soft); }
+.value-check {
+  flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--sage); display: flex; align-items: center; justify-content: center; margin-top: 1px;
+}
+.value-check svg { width: 11px; height: 11px; fill: #fff; }
+
+/* CTA */
+.cta-section { padding: 30px 0 70px; }
+.cta-card {
+  background: linear-gradient(140deg, var(--gold-soft) 0%, #DFC987 50%, var(--gold-pale) 100%);
+  border-radius: var(--radius-lg); padding: 52px 36px; text-align: center;
+  position: relative; box-shadow: var(--shadow-hero); overflow: hidden;
+  border: 1px solid rgba(201,154,67,0.3);
+}
+.cta-card::before {
+  content: ""; position: absolute; width: 260px; height: 260px;
+  background: radial-gradient(circle, rgba(201,154,67,0.3) 0%, transparent 70%);
+  top: -80px; right: -80px; pointer-events: none;
+}
+.cta-card::after {
+  content: ""; position: absolute; width: 180px; height: 180px;
+  background: radial-gradient(circle, rgba(192,113,78,0.15) 0%, transparent 70%);
+  bottom: -60px; left: -60px; pointer-events: none;
+}
+.cta-eyebrow { font-family: 'Caveat', cursive; font-size: 22px; color: var(--terra-deep); margin-bottom: 10px; display: block; }
+.cta-card h2 { font-size: clamp(26px, 5vw, 36px); color: var(--ink); margin-bottom: 14px; position: relative; z-index: 1; }
+.cta-sub { font-size: 16px; color: var(--ink-soft); max-width: 400px; margin: 0 auto 32px; position: relative; z-index: 1; line-height: 1.65; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, var(--terracotta) 0%, var(--terra-deep) 100%);
+  color: #fff; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 16px;
+  padding: 18px 38px; border-radius: var(--radius-pill); text-decoration: none;
+  box-shadow: 0 12px 32px rgba(192,113,78,0.45);
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer; border: none; position: relative; z-index: 1; letter-spacing: 0.01em;
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(192,113,78,0.55); }
+.btn-primary:active { transform: translateY(-1px); }
+.btn-primary:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+.btn-arrow { transition: transform var(--transition); }
+.btn-primary:hover .btn-arrow { transform: translateX(4px); }
+.cta-note { margin-top: 20px; font-size: 13px; color: var(--ink-muted); position: relative; z-index: 1; }
+
+.reassure-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; margin-top: 32px; }
+.reassure-item { display: flex; align-items: center; gap: 9px; font-size: 14px; color: var(--ink-soft); }
+.reassure-check {
+  width: 18px; height: 18px; border-radius: 50%; background: var(--sage-light);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.reassure-check svg { width: 10px; height: 10px; fill: var(--sage); }
+
+/* FAQ */
+.faq-list { display: grid; gap: 10px; margin-top: 26px; }
+.faq-item {
+  background: var(--white); border: 1px solid rgba(41,32,26,0.09);
+  border-radius: var(--radius-card); overflow: hidden; box-shadow: var(--shadow-soft);
+}
+.faq-question {
+  width: 100%; text-align: left; background: none; border: none;
+  padding: 20px 22px; display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; cursor: pointer; font-family: 'Jost', sans-serif; font-weight: 500;
+  font-size: 15.5px; color: var(--ink); transition: background var(--transition);
+}
+.faq-question:hover { background: var(--paper); }
+.faq-chevron {
+  flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--paper-mid);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform var(--transition), background var(--transition);
+}
+.faq-chevron svg {
+  width: 12px; height: 12px; stroke: var(--ink-soft); fill: none;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  transition: transform var(--transition);
+}
+.faq-item.open .faq-chevron { background: var(--terracotta); }
+.faq-item.open .faq-chevron svg { stroke: #fff; transform: rotate(180deg); }
+.faq-answer { display: none; padding: 0 22px 20px; font-size: 14.5px; color: var(--ink-soft); line-height: 1.7; }
+.faq-item.open .faq-answer { display: block; }
+
+/* SIGN-OFF */
+.signoff { text-align: center; padding: 72px 0 56px; position: relative; }
+.signoff-line { font-family: 'Caveat', cursive; font-size: clamp(26px, 5vw, 32px); color: var(--ink-soft); line-height: 1.45; }
+.signoff-name { font-family: 'Caveat', cursive; font-size: clamp(44px, 9vw, 58px); color: var(--terracotta); line-height: 1; margin-top: 8px; display: block; }
+.signoff-ornament { display: inline-flex; gap: 10px; margin-top: 28px; opacity: 0.4; }
+.ornament-bar { width: 40px; height: 1px; background: var(--ink-muted); margin-top: 9px; }
+
+/* FOOTER */
+footer { text-align: center; padding: 24px 0 44px; font-size: 12px; color: var(--ink-muted); opacity: 0.7; position: relative; z-index: 2; }
+
+/* STICKY CTA */
+.sticky-cta {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(246,240,228,0.94);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(41,32,26,0.1);
+  padding: 12px 16px 16px;
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+  transform: translateY(110%);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sticky-cta.show { transform: translateY(0); }
+.sticky-cta .btn-primary { flex: 1; max-width: 360px; justify-content: center; padding: 15px 28px; font-size: 15px; }
+
+/* RESPONSIVE */
+@media (max-width: 560px) {
+  section { padding: 54px 0; }
+  .hero { padding: 36px 0 48px; }
+  .doc-layout { grid-template-columns: 1fr; text-align: center; }
+  .doc-photo { margin: 0 auto; }
+  .doc-photo-wrap { display: flex; justify-content: center; }
+  .cred-chips { justify-content: center; }
+  .specialty-tag { min-width: 100%; }
+  .story-cards { grid-template-columns: 1fr; }
+  .story-card.then, .story-card.now { transform: none; }
+  .testimonials-track { grid-template-columns: 1fr; }
+  .reassure-grid { grid-template-columns: 1fr; }
+  .cta-card { padding: 38px 22px; }
+  .btn-primary { padding: 16px 28px; font-size: 15px; }
+  .video-wrap { max-width: 280px; }
+}
+@media (max-width: 400px) {
+  .hero h1 { font-size: 28px; }
+  .cta-card h2 { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP STRIP -->
+<div class="top-strip">
+  <a href="https://www.instagram.com/dr.aditi_derm" target="_blank" rel="noopener">@dr.aditi_derm</a>
+  <span class="dot">&#183;</span>
+  Dr. Rickson's Dermatherapie Clinic, Mumbai
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="hero-greeting">hi, glad you found me &#127807;</span>
+    </div>
+    <h1 class="reveal reveal-delay-1">
+      What acne scar healing<br>
+      <em>actually</em> looks like
+    </h1>
+    <p class="hero-sub reveal reveal-delay-2">
+      A real, honest look at my own six-year journey &#8212; and how you can finally start yours,
+      without waiting weeks in a DM queue.
+    </p>
+
+    <div class="video-wrap reveal reveal-delay-3">
+      <div class="video-card" id="videoCard" role="button" aria-label="Watch Dr. Aditi's introduction video" tabindex="0">
+        <img class="video-thumb"
+          src="https://media.swipepages.com/2026/6/6a43c6b7ffd0b50012dd8959/dr-aditi-hero-video-still.png"
+          alt="Dr. Aditi Mahajan skin story" loading="lazy">
+        <div class="video-overlay"></div>
+        <span class="video-badge">Watch &#183; 90 sec</span>
+        <div class="video-content">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <p class="video-caption">&#8220;Hi, I'm Dr. Aditi &#8212;<br>here's my own skin story&#8221;</p>
+          <p class="video-sub">Recorded honestly, no filter</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-trust reveal reveal-delay-4">
+      <span>MBBS, MD DVL</span>
+      <span class="trust-dot">&#10022;</span>
+      <span>Board Certified Dermatologist</span>
+      <span class="trust-dot">&#10022;</span>
+      <span>Mumbai</span>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider--ornament">
+  <div class="ornament-dot"></div>
+  <div class="ornament-dot"></div>
+  <div class="ornament-dot"></div>
+</div>
+
+<!-- STORY -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow reveal">My story &#8212; honestly</span>
+    <h2 class="reveal" style="font-size:clamp(26px,5vw,34px); margin-top:16px; margin-bottom:22px;">
+      I didn't start out<br>with clear skin either.
+    </h2>
+    <div class="story-intro">
+      <p class="body-text reveal">
+        Growing up, I struggled with severe scarring acne, atopic dermatitis, PCOS-related hair fall, and the
+        kind of skin that made me avoid mirrors and skip photos. I spent years hiding under full-coverage
+        foundation, cancelling plans, and spiralling from one failed "solution" to the next.
+      </p>
+      <p class="body-text reveal reveal-delay-1">
+        That struggle is actually what pushed me to become a dermatologist &#8212; I needed the answers myself,
+        first. I studied the science deeply, trained under exceptional mentors, and slowly &#8212; very slowly &#8212;
+        figured out what actually works for skin like mine. It wasn't one product, one peel, or one miracle.
+        It was understanding <em>root cause</em>, building a protocol, and giving it time.
+      </p>
+      <p class="body-text reveal reveal-delay-2">
+        I'm sharing this because I know exactly how isolating that cycle feels. And because I want you to
+        know: there is a way through. It just takes the right guidance, a realistic plan, and someone who's
+        walked the path themselves.
+      </p>
+    </div>
+
+    <div class="story-cards reveal">
+      <div class="story-card then">
+        <span class="story-card-tag">this is me, 2018</span>
+        <p>Severe scarring, 15+ years of active breakouts, PCOS flares, dark spots that wouldn't budge. Feeling completely out of options.</p>
+        <span class="card-icon">&#128532;</span>
+      </div>
+      <div class="story-card now">
+        <span class="story-card-tag">today &#10024;</span>
+        <p>Consistent protocol, real texture improvement, manageable cycles. Still a journey &#8212; but I'm in control of it now.</p>
+        <span class="card-icon">&#127807;</span>
+      </div>
+    </div>
+
+    <div class="big-quote reveal">
+      <p>
+        &#8220;My scars don't define me. But understanding them changed everything &#8212; my skin, my confidence,
+        and eventually my entire career.&#8221;
+      </p>
+      <span class="quote-attr">&#8212; Dr. Aditi Mahajan</span>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider wrap"></div>
+
+<!-- DOCTOR INTRO -->
+<section class="doc-section-bg">
+  <div class="wrap">
+    <span class="eyebrow reveal">Meet your doctor</span>
+
+    <div class="doc-layout" style="margin-top:28px;">
+      <div class="doc-photo-wrap reveal reveal--left">
+        <div class="doc-photo-bg"></div>
+        <div class="doc-photo">
+          <img
+            src="https://media.swipepages.com/2026/6/6a43c6b7ffd0b50012dd8959/550539303_17911641549208110_67933138391395801_n.jpg"
+            alt="Dr. Aditi Mahajan &#8212; Clinical and Aesthetic Dermatologist"
+            loading="lazy">
+        </div>
+      </div>
+      <div class="reveal reveal--right reveal-delay-1">
+        <h3 class="doc-name">Dr. Aditi Mahajan</h3>
+        <p class="doc-title">Clinical &amp; Aesthetic Dermatologist &#183; MBBS, MD DVL</p>
+        <p class="body-text" style="font-size:15px;">
+          A holistic, evidence-based approach to understanding the root cause of your skin concerns &#8212;
+          not just the surface symptoms. I combine clinical science with genuine empathy, because
+          I've lived these same struggles myself.
+        </p>
+        <div class="cred-chips" style="margin-top:20px;">
+          <span class="cred-chip highlight">MBBS &#183; MD DVL</span>
+          <span class="cred-chip">Board Certified</span>
+          <span class="cred-chip">Dr. Rickson's Dermatherapie</span>
+          <span class="cred-chip">Mumbai, India</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="specialty-row reveal" style="margin-top:32px;">
+      <div class="specialty-tag">
+        <span class="tag-icon">&#129516;</span>
+        <div>
+          <strong>Acne &amp; Scarring</strong>
+          <span>Active acne &#183; PIH &#183; Atrophic &amp; ice-pick scars</span>
+        </div>
+      </div>
+      <div class="specialty-tag">
+        <span class="tag-icon">&#127807;</span>
+        <div>
+          <strong>Skin of Colour</strong>
+          <span>Melasma &#183; Uneven tone &#183; Sensitivity</span>
+        </div>
+      </div>
+      <div class="specialty-tag">
+        <span class="tag-icon">&#128167;</span>
+        <div>
+          <strong>Chronic Conditions</strong>
+          <span>Atopic dermatitis &#183; Rosacea &#183; Psoriasis</span>
+        </div>
+      </div>
+      <div class="specialty-tag">
+        <span class="tag-icon">&#10024;</span>
+        <div>
+          <strong>Aesthetic Derma</strong>
+          <span>Chemical peels &#183; Laser &#183; Injectables</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider wrap"></div>
+
+<!-- WHAT'S INCLUDED -->
+<section>
+  <div class="wrap">
+    <div class="section-label-row">
+      <span class="eyebrow reveal">Your online consultation</span>
+      <div class="section-label-line"></div>
+    </div>
+    <h2 class="reveal" style="font-size:clamp(24px,4.5vw,32px); margin-bottom:8px;">
+      One-on-one care &#8212; from wherever you are.
+    </h2>
+    <p class="body-text reveal reveal-delay-1" style="margin-bottom:4px;">
+      Simple, honest, and properly personalised. No rushing, no generic advice.
+    </p>
+
+    <div class="includes-list">
+      <div class="includes-item reveal reveal-delay-1">
+        <div class="includes-icon-wrap">&#128483;</div>
+        <div class="includes-body">
+          <h4>A real conversation about your skin</h4>
+          <p>We dig into your full history &#8212; diet, hormones, stress, past treatments &#8212; and build a picture, not just a prescription.</p>
+        </div>
+      </div>
+      <div class="includes-item reveal reveal-delay-2">
+        <div class="includes-icon-wrap">&#128203;</div>
+        <div class="includes-body">
+          <h4>A personalised written protocol</h4>
+          <p>Morning routine, evening routine, treatment steps &#8212; sent to you in writing so you actually remember it.</p>
+        </div>
+      </div>
+      <div class="includes-item reveal reveal-delay-3">
+        <div class="includes-icon-wrap">&#128197;</div>
+        <div class="includes-body">
+          <h4>A realistic treatment timeline</h4>
+          <p>What to expect at 4 weeks, 3 months, 6 months and beyond &#8212; with honest benchmarks, no overnight promises.</p>
+        </div>
+      </div>
+      <div class="includes-item reveal reveal-delay-4">
+        <div class="includes-icon-wrap">&#128300;</div>
+        <div class="includes-body">
+          <h4>Evidence-based recommendations only</h4>
+          <p>Backed by current clinical research, not sponsored content, trending serums, or viral routines.</p>
+        </div>
+      </div>
+      <div class="includes-item reveal">
+        <div class="includes-icon-wrap">&#128172;</div>
+        <div class="includes-body">
+          <h4>Follow-up message support</h4>
+          <p>Questions after your consultation? Reach out. I make sure you're not left wondering what to do next.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="value-card reveal">
+      <span class="value-tag">Everything you get</span>
+      <h3 style="font-size:20px; margin-bottom:10px;">All in one session:</h3>
+      <ul class="value-list">
+        <li>
+          <div class="value-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <span>45-minute deep-dive consultation via Google Meet</span>
+        </li>
+        <li>
+          <div class="value-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <span>Full written skincare &amp; treatment protocol (PDF)</span>
+        </li>
+        <li>
+          <div class="value-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <span>Product recommendations you can actually find in India</span>
+        </li>
+        <li>
+          <div class="value-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <span>3-day follow-up window via WhatsApp</span>
+        </li>
+        <li>
+          <div class="value-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+          <span>Referral for in-clinic procedures if needed (Mumbai)</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider wrap"></div>
+
+<!-- HOW IT WORKS -->
+<section class="doc-section-bg">
+  <div class="wrap">
+    <span class="eyebrow reveal">The process</span>
+    <h2 class="reveal" style="font-size:clamp(24px,4.5vw,32px); margin-top:16px;">Three simple steps.</h2>
+    <div class="steps-list">
+      <div class="step-item reveal">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Book your slot</h4>
+          <p>Pick a date and time that works for you from the calendar. You'll get a confirmation and Google Meet link immediately &#8212; no waiting for someone to respond to your DM.</p>
+        </div>
+      </div>
+      <div class="step-item reveal reveal-delay-1">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Fill the short intake form</h4>
+          <p>A brief form covering your skin history, current concerns, and what you've already tried. This means we hit the ground running in your actual consultation &#8212; no time wasted on basics.</p>
+        </div>
+      </div>
+      <div class="step-item reveal reveal-delay-2">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Your consultation + follow-up</h4>
+          <p>A 45-minute session, your written protocol delivered within 24 hours, and a 3-day follow-up window to ask any lingering questions. Ongoing support available from there.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider wrap"></div>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow reveal">Patient stories</span>
+    <h2 class="reveal" style="font-size:clamp(24px,4.5vw,32px); margin-top:16px; margin-bottom:4px;">Real results from real patients.</h2>
+    <p class="body-text reveal reveal-delay-1">What my patients say &#8212; in their own words.</p>
+
+    <div class="testimonials-track">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">
+          &#8220;I'd tried everything for my PIH and nothing worked. Dr. Aditi actually listened to my whole history, figured out my hormonal triggers, and in 3 months my skin is unrecognisable.&#8221;
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">P</div>
+          <div class="author-info">
+            <strong>Priya S.</strong>
+            <span>Delhi &#183; Acne &amp; PIH</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">
+          &#8220;The written protocol she sent me was so clear and practical. No &#8377;4000 serums &#8212; just products I could actually find and afford. Finally feeling confident bare-faced.&#8221;
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div class="author-info">
+            <strong>Ananya K.</strong>
+            <span>Bengaluru &#183; Atopic dermatitis</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">
+          &#8220;As someone with PCOS, I'd given up on my skin. Dr. Aditi explained the connection between my hormones and my acne in a way nobody had before. That understanding alone was worth it.&#8221;
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div class="author-info">
+            <strong>Ridhi M.</strong>
+            <span>Mumbai &#183; PCOS acne</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-3">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">
+          &#8220;Couldn't make it to Mumbai in person and was nervous about an online consult. Completely unnecessary &#8212; she was thorough, warm, and incredibly knowledgeable. Booked again already.&#8221;
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">S</div>
+          <div class="author-info">
+            <strong>Sana Q.</strong>
+            <span>Hyderabad &#183; Rosacea</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider wrap"></div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <span class="cta-eyebrow">You deserve actual answers</span>
+      <h2>Ready when you are.</h2>
+      <p class="cta-sub">
+        No more waiting weeks for a DM reply. No more generic advice from the algorithm.
+        Pick a time that works for you, and let's actually talk about your skin.
+      </p>
+      <a href="#" id="cta-main-btn" class="btn-primary">
+        Book Your Consultation
+        <span class="btn-arrow">&#8594;</span>
+      </a>
+      <p class="cta-note">Google Meet &#183; In-person option available in Mumbai &#183; Usually replies within 24 hrs</p>
+    </div>
+
+    <div class="reassure-grid reveal" style="margin-top:28px;">
+      <div class="reassure-item">
+        <div class="reassure-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+        <span>No long intake forms</span>
+      </div>
+      <div class="reassure-item">
+        <div class="reassure-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+        <span>Pick your own time slot</span>
+      </div>
+      <div class="reassure-item">
+        <div class="reassure-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+        <span>Private &amp; confidential</span>
+      </div>
+      <div class="reassure-item">
+        <div class="reassure-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+        <span>Written protocol in 24 hrs</span>
+      </div>
+      <div class="reassure-item">
+        <div class="reassure-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+        <span>In-person option, Mumbai</span>
+      </div>
+      <div class="reassure-item">
+        <div class="reassure-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+        <span>3-day WhatsApp follow-up</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider wrap"></div>
+
+<!-- FAQ -->
+<section class="tight">
+  <div class="wrap">
+    <span class="eyebrow reveal">Quick answers</span>
+    <h2 class="reveal" style="font-size:clamp(22px,4vw,30px); margin-top:16px;">Common questions</h2>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">
+          How does the online consultation actually work?
+          <span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          You book a slot, fill a brief intake form (takes 5 minutes), and we meet on Google Meet at your chosen time.
+          I review your form beforehand so the session is focused and productive. Afterward, you receive your
+          written protocol within 24 hours.
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-question" aria-expanded="false">
+          What skin conditions do you consult on?
+          <span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          Acne (all grades), post-inflammatory hyperpigmentation, atrophic &amp; ice-pick scarring, melasma,
+          atopic dermatitis, rosacea, PCOS-related skin &amp; hair concerns, and general aesthetic concerns.
+          If your concern is outside my scope, I'll refer you appropriately.
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-delay-2">
+        <button class="faq-question" aria-expanded="false">
+          I'm not from Mumbai. Can I still consult?
+          <span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          Absolutely &#8212; the online consultation is designed exactly for this. Patients from across India (and
+          internationally) consult regularly. Everything is handled via Google Meet and WhatsApp, and your
+          protocol will include products available near you.
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-delay-3">
+        <button class="faq-question" aria-expanded="false">
+          How soon will I see results?
+          <span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          Honestly &#8212; skin takes time. Most patients notice meaningful improvement in 8&#8211;12 weeks with consistent
+          adherence. Scarring takes longer (3&#8211;6 months). I'll give you clear, realistic benchmarks during your
+          session, not empty overnight promises.
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" aria-expanded="false">
+          What if I have questions after my consultation?
+          <span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          You have a 3-day follow-up window via WhatsApp where you can ask anything that comes up as you
+          start your protocol. For longer-term support, we can schedule a follow-up consultation.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider wrap"></div>
+
+<!-- SIGN-OFF -->
+<section class="signoff">
+  <div class="wrap">
+    <p class="signoff-line reveal">
+      If you've been struggling with your skin<br>
+      and nothing seems to work &#8212;
+    </p>
+    <p class="signoff-line reveal reveal-delay-1" style="margin-top:10px;">
+      it doesn't have to feel this hard.
+    </p>
+    <span class="signoff-name reveal reveal-delay-2">Dr. Aditi</span>
+
+    <div class="signoff-ornament reveal reveal-delay-3">
+      <div class="ornament-bar"></div>
+      <span style="font-family:'Fraunces',serif; font-style:italic; font-size:14px; color:var(--ink-muted);">with care, always</span>
+      <div class="ornament-bar"></div>
+    </div>
+
+    <div style="margin-top:36px;" class="reveal reveal-delay-4">
+      <a href="#" id="cta-signoff-btn" class="btn-primary">
+        Book Your Consultation <span class="btn-arrow">&#8594;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap" style="text-align:center;">
+    @dr.aditi_derm &#183; Dr. Rickson's Dermatherapie Clinic &#183; Mumbai, India<br>
+    <span style="font-size:11px; margin-top:6px; display:block; opacity:0.7;">
+      This page is for informational purposes. Consultation does not replace emergency medical care.
+    </span>
+  </div>
+</footer>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="stickyCta" role="complementary" aria-label="Book consultation">
+  <a href="#" id="cta-sticky-btn" class="btn-primary">
+    Book Your Consultation <span class="btn-arrow">&#8594;</span>
+  </a>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  // Reveal on scroll
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function(el) { el.classList.add('in'); });
+  }
+
+  // Sticky CTA
+  var sticky = document.getElementById('stickyCta');
+  var hero   = document.querySelector('.hero');
+  if (sticky && hero) {
+    var stickyIo = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        sticky.classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0);
+      });
+    }, { threshold: 0 });
+    stickyIo.observe(hero);
+  }
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item   = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // CTA buttons — swap '#' for your booking URL
+  var BOOKING_URL = '#';
+  ['cta-main-btn', 'cta-signoff-btn', 'cta-sticky-btn'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (BOOKING_URL !== '#') {
+          window.open(BOOKING_URL, '_blank', 'noopener');
+        } else {
+          document.querySelector('.hero').scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+  });
+
+  // Video card
+  var videoCard = document.getElementById('videoCard');
+  if (videoCard) {
+    videoCard.addEventListener('click', function() {
+      alert('Video coming soon! Follow @dr.aditi_derm on Instagram for updates.');
+    });
+    videoCard.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); videoCard.click(); }
+    });
+  }
+})();
+</script>
+</body>
+</html>
