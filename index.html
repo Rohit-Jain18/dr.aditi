@@ -566,6 +566,187 @@ footer { text-align: center; padding: 24px 0 44px; font-size: 12px; color: var(-
   .hero h1 { font-size: 28px; }
   .cta-card h2 { font-size: 24px; }
 }
+
+/* ============================================================
+   BEFORE / AFTER SLIDER
+   ============================================================ */
+.ba-section { padding: 70px 0; }
+
+.ba-header { text-align: center; margin-bottom: 36px; }
+.ba-header h2 { font-size: clamp(24px, 4.5vw, 32px); margin-top: 14px; margin-bottom: 10px; }
+.ba-header p { font-size: 15.5px; color: var(--ink-soft); max-width: 420px; margin: 0 auto; }
+
+.ba-wrap {
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow-hero);
+  border: 5px solid var(--paper-deep);
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: ew-resize;
+  touch-action: none;
+}
+
+/* outer card rings for depth */
+.ba-outer {
+  max-width: 420px;
+  margin: 0 auto;
+  position: relative;
+}
+.ba-outer::before, .ba-outer::after {
+  content: "";
+  position: absolute;
+  border-radius: 26px;
+  inset: 0;
+}
+.ba-outer::before {
+  transform: rotate(2deg) scale(1.025);
+  background: var(--paper-mid);
+  box-shadow: var(--shadow-soft);
+  z-index: 0;
+}
+.ba-outer::after {
+  transform: rotate(-1.2deg) scale(1.012);
+  background: var(--paper-deep);
+  z-index: 0;
+}
+
+/* AFTER image — base layer, always full width */
+.ba-after {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* BEFORE image — clipped on top via clip-path */
+.ba-before-layer {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 50% 0 0);   /* default 50% split */
+  transition: clip-path 0.05s linear;
+}
+.ba-before {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* divider line */
+.ba-divider {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;                    /* synced with JS */
+  width: 2px;
+  background: #fff;
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px rgba(0,0,0,0.35);
+  pointer-events: none;
+  transition: left 0.05s linear;
+}
+
+/* circular handle */
+.ba-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;                    /* synced with JS */
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: left 0.05s linear;
+  z-index: 10;
+}
+.ba-arrows {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--terracotta);
+}
+.ba-arrows svg { width: 14px; height: 14px; fill: var(--terracotta); }
+
+/* labels */
+.ba-label {
+  position: absolute;
+  top: 16px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity 0.2s;
+}
+.ba-label-before {
+  left: 14px;
+  background: rgba(41,32,26,0.75);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+.ba-label-after {
+  right: 14px;
+  background: rgba(126,145,105,0.85);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+/* hint text */
+.ba-hint {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.ba-hint-icon { font-size: 16px; animation: ba-wiggle 2s ease-in-out infinite; }
+@keyframes ba-wiggle {
+  0%, 100% { transform: translateX(0); }
+  25%       { transform: translateX(-5px); }
+  75%       { transform: translateX(5px); }
+}
+
+/* caption row */
+.ba-captions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 22px;
+  text-align: center;
+}
+.ba-caption-item {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  padding: 16px 14px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(41,32,26,0.07);
+}
+.ba-caption-item .cap-year {
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  color: var(--ink-soft);
+  display: block;
+  margin-bottom: 4px;
+}
+.ba-caption-item.after-cap .cap-year { color: var(--terra-deep); }
+.ba-caption-item p { font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; }
+
 </style>
 </head>
 <body>
@@ -671,6 +852,77 @@ footer { text-align: center; padding: 24px 0 44px; font-size: 12px; color: var(-
       </p>
       <span class="quote-attr">&#8212; Dr. Aditi Mahajan</span>
     </div>
+  </div>
+</section>
+
+<div class="section-divider wrap"></div>
+
+<!-- BEFORE / AFTER SLIDER -->
+<section class="ba-section">
+  <div class="wrap">
+
+    <div class="ba-header">
+      <span class="eyebrow reveal">The proof is in the skin</span>
+      <h2 class="reveal reveal-delay-1">Dr. Aditi's own transformation</h2>
+      <p class="reveal reveal-delay-2">
+        Drag the slider to see the real difference &#8212; the same skin, 3 years of consistent, evidence-based treatment.
+      </p>
+    </div>
+
+    <div class="reveal reveal-delay-2">
+      <div class="ba-outer">
+        <div class="ba-wrap" id="baWrap">
+          <!-- AFTER (base layer) -->
+          <img
+            class="ba-after"
+            src="https://media.swipepages.com/2026/6/6a43c6b7ffd0b50012dd8959/550539303_17911641549208110_67933138391395801_n.jpg"
+            alt="Dr. Aditi Mahajan &#8212; After: clear skin 3 years later"
+            draggable="false"
+            loading="lazy"
+          >
+          <!-- BEFORE (clipped layer) -->
+          <div class="ba-before-layer" id="baBeforeLayer">
+            <img
+              class="ba-before"
+              src="https://media.swipepages.com/2026/6/6a43c6b7ffd0b50012dd8959/before-acne-skin.jpg"
+              alt="Dr. Aditi Mahajan &#8212; Before: acne scarring skin"
+              draggable="false"
+              loading="lazy"
+              onerror="this.src='https://placehold.co/420x560/E5D5B8/5A4E44?text=Before+Photo'"
+            >
+          </div>
+          <!-- Labels -->
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <!-- Divider -->
+          <div class="ba-divider" id="baDivider"></div>
+          <!-- Handle -->
+          <div class="ba-handle" id="baHandle">
+            <div class="ba-arrows">
+              <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="ba-hint">
+        <span class="ba-hint-icon">&#8596;</span>
+        Drag or swipe to compare
+      </p>
+
+      <div class="ba-captions">
+        <div class="ba-caption-item">
+          <span class="cap-year">2018 &#128532;</span>
+          <p>Active acne, deep scarring, PCOS flares, constant inflammation</p>
+        </div>
+        <div class="ba-caption-item after-cap">
+          <span class="cap-year">3 years later &#10024;</span>
+          <p>Clear texture, even tone, controlled cycles &#8212; with the right protocol</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1153,6 +1405,98 @@ footer { text-align: center; padding: 24px 0 44px; font-size: 12px; color: var(-
     videoCard.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); videoCard.click(); }
     });
+  }
+
+  // ── Before / After Slider ────────────────────────────────
+  var baWrap       = document.getElementById('baWrap');
+  var baBeforeLayer= document.getElementById('baBeforeLayer');
+  var baDivider    = document.getElementById('baDivider');
+  var baHandle     = document.getElementById('baHandle');
+
+  if (baWrap) {
+    var pct = 50; // starting split %
+
+    function setSlider(x) {
+      var rect = baWrap.getBoundingClientRect();
+      var raw  = (x - rect.left) / rect.width * 100;
+      pct = Math.min(95, Math.max(5, raw));
+      baBeforeLayer.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+      baDivider.style.left         = pct + '%';
+      baHandle.style.left          = pct + '%';
+    }
+
+    // Mouse events
+    var dragging = false;
+    baWrap.addEventListener('mousedown', function(e) {
+      dragging = true;
+      setSlider(e.clientX);
+      baWrap.style.cursor = 'grabbing';
+    });
+    window.addEventListener('mousemove', function(e) {
+      if (dragging) setSlider(e.clientX);
+    });
+    window.addEventListener('mouseup', function() {
+      dragging = false;
+      baWrap.style.cursor = 'ew-resize';
+    });
+
+    // Touch events
+    baWrap.addEventListener('touchstart', function(e) {
+      setSlider(e.touches[0].clientX);
+    }, { passive: true });
+    baWrap.addEventListener('touchmove', function(e) {
+      setSlider(e.touches[0].clientX);
+    }, { passive: true });
+
+    // Keyboard accessibility (arrow keys when focused)
+    baWrap.setAttribute('tabindex', '0');
+    baWrap.setAttribute('role', 'slider');
+    baWrap.setAttribute('aria-label', 'Before and after skin comparison slider');
+    baWrap.setAttribute('aria-valuenow', '50');
+    baWrap.setAttribute('aria-valuemin', '0');
+    baWrap.setAttribute('aria-valuemax', '100');
+    baWrap.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft')  { pct = Math.max(5,  pct - 2); }
+      if (e.key === 'ArrowRight') { pct = Math.min(95, pct + 2); }
+      baBeforeLayer.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+      baDivider.style.left         = pct + '%';
+      baHandle.style.left          = pct + '%';
+      baWrap.setAttribute('aria-valuenow', Math.round(pct));
+    });
+
+    // Animate hint wiggle on first reveal
+    var baObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          // Auto-sweep demo so user notices interactivity
+          var start = null;
+          var duration = 1600;
+          function sweep(ts) {
+            if (!start) start = ts;
+            var elapsed = ts - start;
+            var progress = elapsed / duration;
+            if (progress < 1) {
+              // ease in-out sweep from 50 -> 20 -> 80 -> 50
+              var angle = progress * Math.PI * 2;
+              var val = 50 + Math.sin(angle) * 30;
+              pct = val;
+              baBeforeLayer.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+              baDivider.style.left         = pct + '%';
+              baHandle.style.left          = pct + '%';
+              requestAnimationFrame(sweep);
+            } else {
+              pct = 50;
+              baBeforeLayer.style.clipPath = 'inset(0 50% 0 0)';
+              baDivider.style.left         = '50%';
+              baHandle.style.left          = '50%';
+            }
+          }
+          setTimeout(function() { requestAnimationFrame(sweep); }, 600);
+          baObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+    baObserver.observe(baWrap);
   }
 })();
 </script>
